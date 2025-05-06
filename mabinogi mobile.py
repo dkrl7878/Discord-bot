@@ -1,5 +1,6 @@
 import discord
 import asyncio
+import os
 
 # 인텐트 설정 (메시지 콘텐츠 읽기 포함)
 intents = discord.Intents.default()
@@ -21,5 +22,7 @@ async def on_message(message):
         await message.channel.send(f"{message.author} | {message.author.mention}, Hello")
         await message.author.send(f"{message.author} | {message.author.mention}, User, Hello")
 
+
 # 봇을 실행시키기 위한 토큰을 작성해주는 곳
-client.run('MTM2OTI0NTIyNzAxMzExMTkyOA.GWWrK7.4sCJvzse7fJBthcdy0F1QzFycBNjJvUKRnskjw')
+    access_token = os.environ["BOT_TOKEN"]
+    client.run(access_token)
