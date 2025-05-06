@@ -1,1 +1,1 @@
-worker: python mabinogi.py
+worker: python mabinogi mobile.py
